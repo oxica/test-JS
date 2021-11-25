@@ -7,7 +7,7 @@ console.log(result);
 //50
 console.log(typeof result);
 //number
-__________________________________________;
+__________________________________________
 
 let elementHeight = "200.74px";
 const result = Number.parseFloat(elementHeight);
@@ -15,18 +15,18 @@ console.log(result);
 //200.74
 console.log(typeof result);
 //number
-__________________________________________;
+__________________________________________
 
 let salary = 1300.16472;
 salary = salary.toFixed(2);
 salary = Number(salary);
 console.log(salary);
 //1300.16
-__________________________________________;
+__________________________________________
 
 console.log(Math.PI);
 //3.141592653589793
-__________________________________________;
+__________________________________________
 
 console.log(Math.sqrt(16));
 //4
