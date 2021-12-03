@@ -163,17 +163,17 @@ console.log(invertedString);
 
 //Задача 6 Делаем slug в URL из названия статьи
 
-const tittle = 'Top 10 benefits of React framework';
+const tittle = "Top 10 benefits of React framework";
 const normalizedTitle = title.toLocaleLowerCase();
-const words = normalizedTitle.split(' ');
-const slug = words.join('-');
+const words = normalizedTitle.split(" ");
+const slug = words.join("-");
 console.log(slug);
 
 //________________________________
 
 //второй вариант
 const tittle = "Top 10 benefits of React framework";
-const slug1 = title.toLocaleLowerCase().split(" ").join('-');
+const slug1 = title.toLocaleLowerCase().split(" ").join("-");
 console.log(slug1);
 
 //_________________________________
@@ -221,7 +221,7 @@ const cards = [
   "Карточка-2",
   "Карточка-3",
   "Карточка-4",
-  "Карточка-5"
+  "Карточка-5",
 ];
 
 console.table(cards);
@@ -261,6 +261,103 @@ const cart = [54, 28, 105, 70, 92, 17, 120, 12, 25, 98];
 let total = 0;
 
 for (const value of cart) {
-    total += value;
+  total += value;
 }
 console.log(total);
+
+//_________________________________________
+
+const numbers = [1, 2, 3, "many"];
+numbers[0];
+numbers[0] = 4;
+numbers[0];
+for (const number of numbers) {
+  console.log(number);
+}
+// 4
+// 2
+// 3
+// many
+for (let number of numbers) {
+  console.log(number);
+}
+// 4
+// 2
+// 3
+// many
+const numbersNTF = "many";
+let message = "Not find";
+for (const number of numbers) {
+  if (number === numbersNTF) {
+    message = "Find";
+    break;
+  }
+}
+console.log(message);
+// Find
+
+//_________________________________________
+
+const numbers= [1, 2, 3, 'many'];
+console.log(Array.isArray(numbers));
+//true
+
+//__________________________________________
+
+let numbers = [2, , , 4];
+numbers[1];
+//undefined;
+
+//______________________________________
+
+const numbers= [1, 2, 3, 'many'];
+numbers.unshift(555);
+//5
+
+//______________________________________
+
+const numbers = ["M", "a", "n", "g", "o"];
+numbers.pop();
+//"o"
+numbers.pop();
+//"g"
+
+//______________________________________
+
+const numbers = [1, 2, 3, "many"];
+numbers.shift();
+//1
+console.table(numbers);
+
+//index  Value
+// 0	      2
+// 1	      3
+// 2	    'many'
+// Array(3)
+
+//______________________________________
+
+const numbers = [1, 2, 3, "many"];
+numbers.push(4);
+//5
+
+//___________________________________
+
+const numbers = [1, 3, 5, 6, 7];
+numbers.slice(0, 3);
+
+//_________________________________
+
+const numbers = [1, 2, 3, 4, 5];
+numbers.splice(1, 1, 8, 9);
+//[2]
+console.log(numbers);
+//[(1, 8, 9, 3, 4, 5)];
+
+//_____________________________________
+const oldNumbers = [1, 2, 3, 4];
+const newNumbers = [10, 20, 30];
+const allNumbers = oldNumbers.concat(newNumbers);
+console.log(allNumbers);
+console.log(allNumbers);
+//[1, 2, 3, 4, 10, 20, 30]
