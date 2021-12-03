@@ -164,7 +164,7 @@ console.log(invertedString);
 //Задача 6 Делаем slug в URL из названия статьи
 
 const tittle = "Top 10 benefits of React framework";
-const normalizedTitle = title.toLocaleLowerCase();
+const normalizedTitle = title.toLowerCase();
 const words = normalizedTitle.split(" ");
 const slug = words.join("-");
 console.log(slug);
@@ -172,8 +172,8 @@ console.log(slug);
 //________________________________
 
 //второй вариант
-const tittle = "Top 10 benefits of React framework";
-const slug1 = title.toLocaleLowerCase().split(" ").join("-");
+const title = "Top 10 benefits of React framework";
+const slug1 = title.toLowerCase().split(" ").join("-");
 console.log(slug1);
 
 //_________________________________
