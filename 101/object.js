@@ -1,4 +1,5 @@
 //Объект
+
 const playlist = {
   name: "Мой супер плейлист",
   rating: 5,
@@ -8,6 +9,7 @@ const playlist = {
 console.log(playlist);
 
 //Доступ к свойству
+
 const playlist = {
   name: "Мой супер плейлист",
   rating: 5,
@@ -36,6 +38,7 @@ console.log(playlist['rating']);//идентичная запись
 console.log(playlist[propertyName]);//идентичная запись
 
 //Объект, в котором ключ динамический (как в инпуте)
+
 const userName = 'Mango';
 const email = 'mango@gmail.com';
 
@@ -71,6 +74,7 @@ const colorPickerData = {
 console.log(colorPickerData);
 
 //Добавить, если такого свойства нет. Если такое свойство есть, изменяем его значение. Переопределить.
+
 const playlist = {
   name: "Мой супер плейлист",
   rating: 5,
@@ -107,3 +111,60 @@ const fn = function () {
 
 fn.hello = ':)';
 console.dir(fn);
+
+//____________________
+
+//Метод объекта
+
+const playlist = {
+  name: "Мой супер плейлист",
+  rating: 5,
+  tracks: ["трек-1", "трек-2", "трек-3"],
+  trackCount: 3,
+    // getName: function (a) {
+    //     console.log("Это getName", a);
+    // },
+    getName() {
+        console.log("Это getName");
+    },
+};
+
+
+playlist.getName(5);
+
+// Метод - изменить имя
+//this
+
+const playlist = {
+  name: "Мой супер плейлист",
+  rating: 5,
+  tracks: ["трек-1", "трек-2", "трек-3"],
+  //trackCount: 3,
+
+  changeName(newName) {
+    console.log(this);
+
+    this.name = newName;
+  },
+  addTrack(track) {
+      this.tracks.push(track);
+      //this.trackCount = this.tracks.length; //плохо, так как находится в объекте
+  },
+  updateRating(newRating) {
+      this.rating = newRating;
+    },
+  //вычисляемое свойство подсчета кол-тва треков используя длину массива
+  getTrackCount() {
+      return this.tracks.length;
+      //return {TrackCount: this.tracks.length};
+  },
+};
+
+console.log(playlist.getTrackCount());
+
+playlist.changeName('Новое имя');
+playlist.addTrack('новый трек');
+playlist.updateRating(4);
+
+console.log(playlist);
+console.log(playlist.getTrackCount());
