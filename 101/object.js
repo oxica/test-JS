@@ -70,7 +70,7 @@ const colorPickerData = {
 };
 console.log(colorPickerData);
 
-//Добавить 
+//Добавить, если такого свойства нет. Если такое свойство есть, изменяем его значение. Переопределить.
 const playlist = {
   name: "Мой супер плейлист",
   rating: 5,
@@ -81,3 +81,29 @@ const playlist = {
 playlist.qwe = 3;
 
 console.log(playlist);
+
+//Ссылочный тип
+
+const a = { x: 1, y: 2 };
+const b = a;
+
+a.c = 100;
+
+console.log(a);
+console.log(b);
+console.log(a === b); //true
+
+//Массивы это объекты
+
+const a = [1, 2, 3];
+a.hello = ':)';
+console.log(a);
+
+//функции это объекты
+
+const fn = function () {
+    console.log('hello');
+}
+
+fn.hello = ':)';
+console.dir(fn);
