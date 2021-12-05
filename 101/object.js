@@ -69,3 +69,15 @@ const colorPickerData = {
   [inputName]: inpurValue,
 };
 console.log(colorPickerData);
+
+//Добавить 
+const playlist = {
+  name: "Мой супер плейлист",
+  rating: 5,
+  tracks: ["трек-1", "трек-2", "трек-3"],
+  trackCount: 3,
+};
+
+playlist.qwe = 3;
+
+console.log(playlist);
