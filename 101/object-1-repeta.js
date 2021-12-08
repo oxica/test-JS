@@ -168,3 +168,4 @@ playlist.updateRating(4);
 
 console.log(playlist);
 console.log(playlist.getTrackCount());
+
