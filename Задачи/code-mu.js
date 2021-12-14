@@ -997,12 +997,12 @@ while (num > 10) {
 console.log(num); // 7.8125
 
 //еще один способ решения задачи выше
-//for (var num = 500; num > 10; num = num / 2);
-//console.log(num);
+for (var num = 500; num > 10; num = num / 2);
+console.log(num);
 
 //и еще один способ с подсчетом к-тва совершенных циклом операций
-//for (var num = 500, i = 0; num > 10; num = num / 2, i++);
-//console.log(num, i);
+for (var num = 500, i = 0; num > 10; num = num / 2, i++);
+console.log(num, i);
 
 
 //Дано число num с неким начальным значением. Умножайте его на 3 столько раз, пока результат
@@ -1018,6 +1018,139 @@ for (let i = 1; i < 1000; i++) {
 }
 console.log(result); //334 ????проверить!   //1002
 
+
+/*****************************************************************************
+ *                                                                           *
+ *      --------118----------  Стрелочные функции  ---------------- 
+ *                                                                           *
+ * ***************************************************************************
+ */ 
+
+let func1 = function(num1, num2) {
+	let result = num1 * num2;
+	return result;
+}
+
+//-----
+
+let func2 = (num1, num2) => {
+	let result = num1 * num2;
+	return result;
+}
+
+//-----------------------------------
+
+let func1 = function(num1, num2) {
+	return num1 * num2
+}
+
+//-----
+
+let func2 = (num1, num2) => num1 * num2;
+
+//---------------------------------
+
+let func1 = function(num1, num2) {
+	return num1 * num2
+}
+
+//------
+
+let func2 = (num1, num2) => num1 * num2;
+
+//-------------------------------
+
+let func1 = function() {
+	alert('!!!');
+}
+
+//------
+
+let func2 = () => alert('!!!')
+
+//-------------------------------
+
+//функцию filter
+
+let result = filter([1, 2, 3, 4, 5], function(elem) {
+	if (elem % 2 === 0) {
+		return true;
+	} else {
+		return false;
+	}
+});
+
+//-----
+
+let result = filter([1, 2, 3, 4, 5], function(elem) {
+	if (elem % 2 === 0) {
+		return true;
+	} else {
+		return false;
+	}
+});
+
+//-----
+
+let result = filter([1, 2, 3, 4, 5], function(elem) {
+	return elem % 2 == 0;
+});
+
+//------
+
+let result = filter([1, 2, 3, 4, 5], (elem) => elem % 2 == 0);
+
+//Упростите коллбэк через стрелочную функцию
+
+let result = every([1, 2, 3, 4, 5], function(elem) {
+	if (elem > 0) {
+		return true;
+	} else {
+		return false;
+	}
+});
+
+//-----
+let result = every([1, 2, 3, 4, 5], function(elem) {
+	return elem > 0;
+});
+
+//------
+
+let result = every([1, 2, 3, 4, 5], (elem) => elem > 0);
+
+//Упростите коллбэк через стрелочную функцию
+
+let result = every([1, 2, 3, 4, 5], function(elem, index) {
+	if (elem * index > 10) {
+		return true;
+	} else {
+		return false;
+	}
+});
+
+//----
+
+let result = every([1, 2, 3, 4, 5], (elem, index) => elem * index > 10);
+
+
+//Упростите коллбэк через стрелочную функцию
+
+let arr = [[1, 2, 3], [4, 5, 6], [7, 8, 9]];
+
+let result = each(arr, function(elem, index) {
+	if (elem * index > 10) {
+		return true;
+	} else {
+		return false;
+	}
+});
+
+//------
+
+let arr = [[1, 2, 3], [4, 5, 6], [7, 8, 9]];
+
+let result = each(arr, (elem, index) =>elem * index > 10)
 
 /***********************************************
  * *********************************************
@@ -1227,12 +1360,21 @@ let day;
 
 
 
+
+
+
 /*****************************************************************************
  *                                                                           *
  * -----134-----  Деструктуризация параметров функций в JavaScript  ---------- 
  *                                                                           *
  * ***************************************************************************
  */ 
+
+
+
+
+
+
 
 
 
