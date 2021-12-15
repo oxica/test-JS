@@ -177,11 +177,9 @@ const bookShelf = {
     // Change code below this line
     for (const book of this.books) {
       if (this.books.indexOf(oldName) 
-        this.books.splice(this.books.indexOf(oldName)) && oldName = newName
-      
+        this.books.splice(this.books.indexOf(oldName)) && oldName=newName)
     };
       return bookShelf;
   },
   // Change code above this line
 };
-
