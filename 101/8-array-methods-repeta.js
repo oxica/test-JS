@@ -264,18 +264,15 @@ console.log(tagStats);
 
 //{js: 3, nodejs: 3, html: 2, css: 2, react: 2}
 
-
-
 //----------------3---------------
 
-const user = { name: 'Mango', };
-const key = 'name';
+const user = { name: "Mango" };
+const key = "name";
 console.log(user[key]);
 
 //analog
 
 const user = { name: "Mango" };
 const key = "name";
-console.log(user['name']);
-
+console.log(user["name"]);
 
