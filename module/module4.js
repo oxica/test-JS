@@ -353,3 +353,488 @@ const uniqueGenres = allGenres.filter((book,index,array) => array.indexOf(book) 
 
 //21
 
+const books = [
+  {
+    title: "The Last Kingdom",
+    author: "Bernard Cornwell",
+    rating: 8.38,
+  },
+  {
+    title: "Beside Still Waters",
+    author: "Robert Sheckley",
+    rating: 8.51,
+  },
+  {
+    title: "The Dream of a Ridiculous Man",
+    author: "Fyodor Dostoevsky",
+    rating: 7.75,
+  },
+  { title: "Redder Than Blood", author: "Tanith 
+
+Lee", rating: 7.94 },
+  { title: "Enemy of God", author: "Bernard 
+
+Cornwell", rating: 8.67 },
+];
+
+const MIN_RATING = 8;
+const AUTHOR = "Bernard Cornwell";
+// Change code below this line
+
+const topRatedBooks = books.filter(book => 
+
+book.rating >= MIN_RATING);
+const booksByAuthor = books.filter(book => 
+
+book.author === AUTHOR);
+
+//console.log(topRatedBooks)
+//(3) [{…}, {…}, {…}]
+//0: {title: 'The Last Kingdom', author: 
+
+'Bernard Cornwell', rating: 8.38}
+//1: {title: 'Beside Still Waters', author: 
+
+'Robert Sheckley', rating: 8.51}
+
+//console.log(booksByAuthor)
+//2: {title: 'Enemy of God', author: 'Bernard 
+
+Cornwell', rating: 8.67}
+//(2) [{…}, {…}]
+//0: {title: 'The Last Kingdom', author: 
+
+'Bernard Cornwell', rating: 8.38}
+//1: {title: 'Enemy of God', author: 'Bernard 
+
+Cornwell', rating: 8.
+
+
+//22
+
+const getUsersWithEyeColor = (users, color) => {
+ const eyeColor = users.filter(user => 
+
+user.eyeColor === color);
+  return eyeColor;
+};
+
+
+//23
+
+const getUsersWithAge = (users, minAge, maxAge) 
+
+=> {
+ const usersAge = users.filter(user => user.age 
+
+>= minAge && user.age <= maxAge);
+return usersAge;
+};
+
+
+//24*includes
+
+const getUsersWithFriend = (users, friendName) 
+
+=> {
+  const userFriends = users.filter(
+    
+    user => user.friends.includes(friendName));
+  return userFriends;
+};
+
+
+//25
+
+const getFriends = (users) => {
+   const usersFriends = users.flatMap(user => 
+
+user.friends);
+  const uniqueFriends = usersFriends.filter
+
+((friend, index,array) => array.indexOf(friend) 
+
+=== index);
+  return uniqueFriends;
+};
+
+
+//26
+
+const getActiveUsers = (users) => {
+  const activeUsers = users.filter(user => 
+
+user.isActive === true);
+  return activeUsers;
+};
+
+
+//27
+
+const getInactiveUsers = (users) => {
+   const inactiveUsers = users.filter(user => 
+
+user.isActive === false);
+  return inactiveUsers;
+};
+
+
+//28
+
+const books = [
+  {
+    title: 'The Last Kingdom',
+    author: 'Bernard Cornwell',
+    rating: 8.38,
+  },
+  {
+    title: 'Beside Still Waters',
+    author: 'Robert Sheckley',
+    rating: 8.51,
+  },
+  {
+    title: 'The Dream of a Ridiculous Man',
+    author: 'Fyodor Dostoevsky',
+    rating: 7.75,
+  },
+  { title: 'Redder Than Blood', author: 'Tanith 
+
+Lee', rating: 7.94 },
+];
+const BOOK_TITLE = 'The Dream of a Ridiculous 
+
+Man';
+const AUTHOR = 'Robert Sheckley';
+// Change code below this line
+
+const bookWithTitle = books.find((book) => 
+
+book.title === BOOK_TITLE);
+const bookByAuthor = books.find((book) => 
+
+book.author === AUTHOR);
+
+
+//29
+
+const getUserWithEmail = (users, email) => {
+  const userEmail = users.find((user) => 
+
+user.email === email);
+  return userEmail;
+};
+
+
+//30
+
+const firstArray = [26, 94, 36, 18];
+const secondArray = [17, 61, 23];
+const thirdArray = [17, 26, 94, 61, 36, 23, 18];
+// Change code below this line
+
+const eachElementInFirstIsEven = 
+
+firstArray.every((number) => number % 2 === 0);
+const eachElementInFirstIsOdd = 
+
+firstArray.every((number) => number % 2 === 1);
+
+const eachElementInSecondIsEven = 
+
+secondArray.every((number) => number % 2 === 0);
+const eachElementInSecondIsOdd = 
+
+secondArray.every((number) => number % 2 === 1);
+
+const eachElementInThirdIsEven = 
+
+thirdArray.every((number) => number % 2 === 0);
+const eachElementInThirdIsOdd = 
+
+thirdArray.every((number) => number % 2 === 1);
+
+
+//31
+
+const isEveryUserActive = (users) => {
+  const userActive = users.every((user) => 
+
+user.isActive === true);
+  return userActive;
+};
+
+
+//32
+
+const firstArray = [26, 94, 36, 18];
+const secondArray = [17, 61, 23];
+const thirdArray = [17, 26, 94, 61, 36, 23, 18];
+// Change below this line
+
+const anyElementInFirstIsEven = firstArray.some
+
+((number) => number % 2 === 0);
+const anyElementInFirstIsOdd = firstArray.some
+
+((number) => number % 2 === 1);
+
+const anyElementInSecondIsEven = 
+
+secondArray.some((number) => number % 2 === 0);
+const anyElementInSecondIsOdd = 
+
+secondArray.some((number) => number % 2 === 1);
+
+const anyElementInThirdIsEven = thirdArray.some
+
+((number) => number % 2 === 0);
+const anyElementInThirdIsOdd = thirdArray.some
+
+((number) => number % 2 === 1);
+
+
+//33
+
+const isAnyUserActive = users => {
+  const userActive = users.some((user) => user. 
+
+isActive === true);
+  return userActive;
+};
+
+
+//доп.задание reduce
+
+const total = [2, 7, 3, 14, 6].reduce
+
+((previousValue, number) => {
+  return previousValue + number;
+}, 0);
+
+console.log(total); // 32
+
+
+//34
+
+const players = {
+  mango: 1270,
+  poly: 468,
+  ajax: 710,
+  kiwi: 244
+};
+const playtimes = Object.values(players); // 
+
+[1270, 468, 710, 244]
+// Change code below this line
+
+const totalPlayTime = playtimes.reduce((acc, 
+
+playtime) => {return acc + playtime},0);
+
+// Change code above this line
+const averagePlayTime = totalPlayTime / 
+
+playtimes.length;
+
+
+//35
+
+const players = [
+  { name: "Mango", playtime: 1270, gamesPlayed: 
+
+4 },
+  { name: "Poly", playtime: 469, gamesPlayed: 2 
+
+},
+  { name: "Ajax", playtime: 690, gamesPlayed: 3 
+
+},
+  { name: "Kiwi", playtime: 241, gamesPlayed: 1 
+
+},
+];
+// Change code below this line
+
+const totalAveragePlaytimePerGame = 
+
+players.reduce((total, player) =>{return total + 
+
+player.playtime / player.gamesPlayed},0);
+
+
+//36
+
+const calculateTotalBalance = users => {
+return users.reduce((total, user) => total + user.balance,0);
+
+};
+
+
+//37
+
+const getTotalFriendCount = users => {
+  return users.reduce((total, user) => total + user.friends.length,0) 
+};
+
+
+//38
+
+const releaseDates = [2016, 1967, 2008, 1984, 1973, 2012, 1997];
+const authors = [
+  "Tanith Lee",
+  "Bernard Cornwell",
+  "Robert Sheckley",
+  "Fyodor Dostoevsky",
+];
+// Change code below this line
+
+const ascendingReleaseDates = [...releaseDates].sort();
+
+const alphabeticalAuthors = [...authors].sort();
+
+
+//39
+
+const releaseDates = [2016, 1967, 2008, 1984, 1973, 2012, 1997];
+// Change code below this line
+
+const ascendingReleaseDates = [...releaseDates].sort();
+
+const descendingReleaseDates = [...releaseDates].sort((a, b) => b-a);
+
+
+//40
+
+const authors = [
+  "Tanith Lee",
+  "Bernard Cornwell",
+  "Robert Sheckley",
+  "Fyodor Dostoevsky",
+  "Howard Lovecraft",
+];
+// Change code below this line
+
+const authorsInAlphabetOrder = [...authors].sort((a,b) => a.localeCompare(b));
+
+const authorsInReversedOrder = [...authors].sort((a,b) => b.localeCompare(a));
+
+
+//41
+
+const books = [
+  {
+    title: "The Last Kingdom",
+    author: "Bernard Cornwell",
+    rating: 8.38,
+  },
+  {
+    title: "Beside Still Waters",
+    author: "Robert Sheckley",
+    rating: 8.51,
+  },
+  {
+    title: "The Dream of a Ridiculous Man",
+    author: "Fyodor Dostoevsky",
+    rating: 7.75,
+  },
+  { title: "Redder Than Blood", author: "Tanith Lee", rating: 7.94 },
+  { title: "Enemy of God", author: "Bernard Cornwell", rating: 8.67 },
+];
+// Change code below this line
+
+const sortedByAuthorName = [...books].sort((a, b)=> a.author.localeCompare(b.author));
+
+const sortedByReversedAuthorName = [...books].sort((a, b)=> b.author.localeCompare(a.author));
+
+const sortedByAscendingRating = [...books].sort((a, b)=>a.rating - b.rating);
+
+const sortedByDescentingRating = [...books].sort((a, b)=>b.rating - a.rating);
+
+
+//42
+
+const sortByAscendingBalance = users => {
+  return [...users].sort((a,b)=> a.balance - b.balance);
+};
+
+
+//43 - убывание
+
+const sortByName = users => {
+ return  [...users].sort((a,b)=> a.name.localeCompare(b.name) );
+};
+
+
+//44
+
+
+const sortByDescendingFriendCount = users => {
+  return [...users].sort((a,b)=> b.friends.length - a.friends.length); 
+};
+
+
+//45**
+
+const books = [
+  {
+    title: "The Last Kingdom",
+    author: "Bernard Cornwell",
+    rating: 8.38,
+  },
+  {
+    title: "Beside Still Waters",
+    author: "Robert Sheckley",
+    rating: 8.51,
+  },
+  {
+    title: "The Dream of a Ridiculous Man",
+    author: "Fyodor Dostoevsky",
+    rating: 7.75,
+  },
+  { title: "Redder Than Blood", author: "Tanith Lee", rating: 7.94 },
+  {
+    title: "The Dreams in the Witch House",
+    author: "Howard Lovecraft",
+    rating: 8.67,
+  },
+];
+const MIN_BOOK_RATING = 8;
+// Change code below this line
+
+const names = books
+.filter(book => book.rating > MIN_BOOK_RATING)
+.map(book => book.author)
+.sort((a,b)=>a.localeCompare(b));
+console.log (names);
+
+
+//46**const names/return
+
+const getNamesSortedByFriendCount = users => {
+  const names = [...users]
+  .sort((a,b)=> a.friends.length - b.friends.length)
+    .map(user => user.name)
+  ;return names;
+};
+
+
+//47
+
+const getSortedFriends = users => {
+   const sorted = users
+   
+   .flatMap(user => user.friends)
+   .filter ((friend, index, array) => array.indexOf(friend) === index)
+  .sort((a,b) => a.localeCompare(b))
+  return sorted;
+};
+
+
+//48***
+
+const getTotalBalanceByGender = (users, gender) => {
+  return users
+  .filter(user => user.gender === gender)
+  .reduce((total, user) => {return total + user.balance},0);
+  
+};
