@@ -1,21 +1,22 @@
 
-1. После какого HTML тега нужно вставить JavaScript ?
+/*
+//1. После какого HTML тега нужно вставить JavaScript ?
  <javascript>
  <js>
  <scripting>
  <script>
 
-2. JavaScript и Java это одно и тоже.
+</script>/2. JavaScript и Java это одно и тоже.
  Да
  Нет
 
-3. В каком разделе можно вставить JavaScript?
+</scripting>3. В каком разделе можно вставить JavaScript?
  <body>
  <head> и <body>
  Нито едно от посочените
  <head>
 
-4. Как правильно вставить внешний скрипт?
+//</head>4. Как правильно вставить внешний скрипт?
  <script name="sample1.js">
  <#include "sample1.js">
  <script src="sample1.js">
@@ -76,6 +77,8 @@
  //Этот комментарий имеет более, чем одной линии//
  /* Этот комментарий имеет более, чем одной линии*/
 
+ /*
+
 15. Как создать нового массива в JavaScript?
  var colors = (1:"yellow", 2:"purple", 3:"blue")
  var colors = ["yellow", "purple", "blue"]
@@ -111,4 +114,5 @@
  browser.name
  navigator.appName
  client.navName
+*/
  
