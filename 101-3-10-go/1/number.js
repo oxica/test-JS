@@ -109,3 +109,14 @@ const invalidNumber = Number("abc");
 console.log(Number.isNaN(invalidNumber));
 //true
 __________________________________________;
+
+
+Math.sin(60);
+//-0.3048106211022167
+
+Math.sin(160);
+//0.21942525837900473
+
+Math.cos(160);
+//-0.9756293127952373
+
