@@ -174,7 +174,7 @@ console.log("total:", total);
 //Напиши скрипт подсчёта суммы покупки со скидкой в зависимости от
 //потраченной суммы за всё время(партнерская программа)
 
-const totalSpent = 5000;
+let totalSpent = 5000;
 let payment = 500;
 let discount = 0;
 
@@ -190,4 +190,9 @@ if (totalSpent >= 100 && totalSpent < 1000) {
 } else {
   console.log("Не партнер, скидка 0%");
 }
+payment = payment - payment * discount;
 console.log(`Оформлен заказ на сумму ${payment} со скидкой ${discount * 100}%`);
+
+totalSpent += payment;
+
+console.log(`Общая сумма потреченная в магазине: ${totalSpent}`);
